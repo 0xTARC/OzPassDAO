@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/home/lewys/dev/crypto/oz/OzPassDAO/contracts/cl_safe_test/FakePass.sol": {
-      "lastModificationDate": 1663440618816,
-      "contentHash": "14af79f735d0714865a308b42aad1908",
+      "lastModificationDate": 1663442754014,
+      "contentHash": "0c7db18d6d4dd49ffb5165fdc6742be2",
       "sourceName": "contracts/cl_safe_test/FakePass.sol",
       "solcConfig": {
         "version": "0.8.17",
@@ -36,7 +36,7 @@
         "^0.8.4"
       ],
       "artifacts": [
-        "MyToken"
+        "FakePass"
       ]
     },
     "/home/lewys/dev/crypto/oz/OzPassDAO/node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol": {
