@@ -20,7 +20,5 @@ export type { ERC165 } from "./@openzeppelin/contracts/utils/introspection/ERC16
 export { ERC165__factory } from "./factories/@openzeppelin/contracts/utils/introspection/ERC165__factory";
 export type { IERC165 } from "./@openzeppelin/contracts/utils/introspection/IERC165";
 export { IERC165__factory } from "./factories/@openzeppelin/contracts/utils/introspection/IERC165__factory";
-export type { FakePass } from "./contracts/cl_safe_test/FakePass.sol/FakePass";
-export { FakePass__factory } from "./factories/contracts/cl_safe_test/FakePass.sol/FakePass__factory";
-export type { MyToken } from "./contracts/cl_safe_test/FakePass.sol/MyToken";
-export { MyToken__factory } from "./factories/contracts/cl_safe_test/FakePass.sol/MyToken__factory";
+export type { FakePass } from "./contracts/cl_safe_test/FakePass";
+export { FakePass__factory } from "./factories/contracts/cl_safe_test/FakePass__factory";
