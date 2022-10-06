@@ -1,6 +1,6 @@
 
-- [ ] join collabland gated telegram chat
-  - [ ] tadao test safe on rinkeby has pass, 0x84c  is owner
-- [ ] glance over telegram to discord api
+- [ ] use telegram -> discord bot and see if i can forward msgs in the gated collabland chat
 - [X] mint fakepass to rinkeby gnosis safe
   - [X] addr: 
+- [X] join collabland gated telegram chat
+  - [X] tadao test safe on rinkeby has pass, 0x84c  is owner

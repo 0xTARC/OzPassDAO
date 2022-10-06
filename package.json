@@ -4,7 +4,8 @@
   "description": "OzPassDAO is dedicated to enabling a secondary round of users to access services provided by OzDao through community ownership of an OzDao Pass.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "transferLocalhostTokens": "node scripts/transfer_localhost_tokens.js"
   },
   "repository": {
     "type": "git",
