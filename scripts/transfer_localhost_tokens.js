@@ -3,28 +3,10 @@
 /// Requires a impersonating the whale accounts with `ganache --wallet.unlockedAccounts="<address_to_impersonate>"`
 /// See example of unlocking multiple accounts in the `run-testnet.sh` script
 
-/* eslint-disable @typescript-eslint/no-var-requires */
-// const yargs = require("yargs/yargs");
-// const { hideBin } = require("yargs/helpers");
 const ethers = require("ethers");
-// const curve = require("@curvefi/api").default;
 const fs = require("fs");
 
 (async () => {
-  // Parse args
-  // const args = yargs(hideBin(process.argv))
-  //   .option("to", {
-  //     description: "The address of the account to send tokens to",
-  //     string: true,
-  //   })
-  //   .option("privateKey", {
-  //     description:
-  //       "The 0x-prefixed private key of the account to send tokens to (needed to deposit LUSD for LUSD3Crv)",
-  //     string: true,
-  //   }).argv;
-  // const toAddress = args.to;
-  // const toPrivateKey = args.privateKey;
-
   const provider = new ethers.providers.JsonRpcProvider(
     "http://localhost:8545"
   );
@@ -37,24 +19,22 @@ const fs = require("fs");
     const mainnetOzPassAddress = "0x0599699BBFC3a92589AD249607f7265c08A1FB61";
     const ozAbi = JSON.parse(fs.readFileSync("./src/abis/Oz.json"));
     const oz = new ethers.Contract(mainnetOzPassAddress, ozAbi, ozHolderSigner);
-    console.log('oz: ')
-    console.log(oz)
-    // const from = ozHolderSigner.address;
-    // const to = "<your_address>";
-    // const tokenId = 145;
-    // const amount = 1;
+    const from = ozHolderSigner.address;
+    const to = "0x84c298CDfA2a4F1758c5989692c6C3c91E9Fd024";
+    const tokenId = 145;
+    const amount = 1;
     try {
-    //   const tx = await oz._safeTransferFrom(
-    //     // from,
-    //     to,
-    //     tokenId,
-    //     amount,
-    //   );
-    //   const txResult = tx.wait(1)
-    //   console.log('tx result: ', txResult)
+      const tx = await oz._safeTransferFrom(
+        // from,
+        to,
+        tokenId,
+        amount,
+      );
+      const txResult = await tx.wait(1)
+      console.log('tx result: ', txResult)
 
-      const balance = await oz.balanceOfBatch(['<your_address>'], [145])
-      console.log('your balance of:', balance.toString())
+      const balance = await oz.balanceOfBatch(['0x84c298CDfA2a4F1758c5989692c6C3c91E9Fd024'], [145])
+      console.log('your balance of oz nft id 145:', balance.toString())
     } catch (e) {
       console.error("\nERROR:\n");
       console.error(e);
